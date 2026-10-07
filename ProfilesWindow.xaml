@@ -1,0 +1,283 @@
+<Controls:MetroWindow x:Class="FortniteBoost.ProfilesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    Title="PERFILES GAMER"
+    Height="600" Width="900"
+    MinHeight="560" MinWidth="820"
+    WindowStartupLocation="CenterScreen"
+    GlowBrush="{StaticResource NeonBlueBrush}"
+    BorderThickness="1"
+    ResizeMode="CanMinimize">
+
+	<Controls:MetroWindow.Resources>
+		<LinearGradientBrush x:Key="TopAccentLine" StartPoint="0,0" EndPoint="1,0">
+			<GradientStop Color="#00F5FF" Offset="0"/>
+			<GradientStop Color="#0066CC" Offset="0.5"/>
+			<GradientStop Color="#00FF88" Offset="1"/>
+		</LinearGradientBrush>
+	</Controls:MetroWindow.Resources>
+
+	<Grid Background="{StaticResource DarkBackgroundBrush}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="220"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- ═══════════════════════════════════════════════════════════════
+             SIDEBAR PERFILES
+        ═══════════════════════════════════════════════════════════════════ -->
+		<Border Grid.Column="0"
+                Background="{StaticResource SidebarGradient}"
+                BorderBrush="{StaticResource BorderBrush}"
+                BorderThickness="0,0,1,0">
+			<DockPanel>
+
+				<!-- Header sidebar -->
+				<Border DockPanel.Dock="Top"
+                        Padding="20,20"
+                        BorderBrush="{StaticResource BorderBrush}"
+                        BorderThickness="0,0,0,1">
+					<StackPanel>
+						<TextBlock Text="// PERFILES"
+                                   FontFamily="Consolas"
+                                   FontSize="9"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}"
+                                   
+                                   Margin="0,0,0,4"/>
+						<TextBlock Text="Gamer"
+                                   FontFamily="Consolas"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource NeonBlueBrush}"/>
+					</StackPanel>
+				</Border>
+
+				<!-- Botones de perfil -->
+				<StackPanel DockPanel.Dock="Top" Margin="0,12,0,0">
+
+					<TextBlock Text="SELECCIONA UN PERFIL"
+                               Style="{StaticResource SectionLabel}"/>
+
+					<!-- Boton Competitivo -->
+					<Button Click="CompetitiveProfile_Click"
+                            Style="{StaticResource GamerButton}"
+                            Height="52"
+                            Margin="0,2,0,2">
+						<Button.Content>
+							<StackPanel Orientation="Horizontal" Margin="4,0,0,0">
+								<Border Width="4" Height="20"
+                                        Background="{StaticResource NeonBlueBrush}"
+                                        CornerRadius="2"
+                                        Margin="0,0,12,0"
+                                        VerticalAlignment="Center"/>
+								<StackPanel>
+									<TextBlock Text="COMPETITIVO"
+                                               FontFamily="Consolas"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextPrimaryBrush}"/>
+									<TextBlock Text="Max FPS · 20 tweaks"
+                                               FontFamily="Consolas"
+                                               FontSize="9"
+                                               Foreground="{StaticResource TextMutedBrush}"/>
+								</StackPanel>
+							</StackPanel>
+						</Button.Content>
+					</Button>
+
+					<!-- Boton Streaming -->
+					<Button Click="StreamingProfile_Click"
+                            Style="{StaticResource GamerButton}"
+                            Height="52"
+                            Margin="0,2,0,2">
+						<Button.Content>
+							<StackPanel Orientation="Horizontal" Margin="4,0,0,0">
+								<Border Width="4" Height="20"
+                                        Background="{StaticResource NeonGreenBrush}"
+                                        CornerRadius="2"
+                                        Margin="0,0,12,0"
+                                        VerticalAlignment="Center"/>
+								<StackPanel>
+									<TextBlock Text="STREAMING"
+                                               FontFamily="Consolas"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextPrimaryBrush}"/>
+									<TextBlock Text="Calidad + FPS estables"
+                                               FontFamily="Consolas"
+                                               FontSize="9"
+                                               Foreground="{StaticResource TextMutedBrush}"/>
+								</StackPanel>
+							</StackPanel>
+						</Button.Content>
+					</Button>
+
+					<!-- Boton Default -->
+					<Button Click="DefaultProfile_Click"
+                            Style="{StaticResource GamerButton}"
+                            Height="52"
+                            Margin="0,2,0,2">
+						<Button.Content>
+							<StackPanel Orientation="Horizontal" Margin="4,0,0,0">
+								<Border Width="4" Height="20"
+                                        Background="{StaticResource NeonRedBrush}"
+                                        CornerRadius="2"
+                                        Margin="0,0,12,0"
+                                        VerticalAlignment="Center"/>
+								<StackPanel>
+									<TextBlock Text="RESTAURAR"
+                                               FontFamily="Consolas"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextPrimaryBrush}"/>
+									<TextBlock Text="Revertir cambios"
+                                               FontFamily="Consolas"
+                                               FontSize="9"
+                                               Foreground="{StaticResource TextMutedBrush}"/>
+								</StackPanel>
+							</StackPanel>
+						</Button.Content>
+					</Button>
+
+					<Separator Style="{StaticResource NeonSeparator}" Margin="16,12"/>
+
+					<TextBlock Text="HERRAMIENTAS"
+                               Style="{StaticResource SectionLabel}"/>
+
+					<Button Content="  Priorizar Fortnite"
+                            Click="PrioritizeFortnite_Click"
+                            Style="{StaticResource GamerButton}"
+                            Height="36"/>
+
+					<Button Content="  Activar FPS counter"
+                            Style="{StaticResource GamerButton}"
+                            Height="36"/>
+
+				</StackPanel>
+
+			</DockPanel>
+		</Border>
+
+		<!-- ═══════════════════════════════════════════════════════════════
+             PANEL DERECHO
+        ═══════════════════════════════════════════════════════════════════ -->
+		<Grid Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="3"/>
+				<!-- Accent line -->
+				<RowDefinition Height="52"/>
+				<!-- Header -->
+				<RowDefinition Height="Auto"/>
+				<!-- Status card -->
+				<RowDefinition Height="Auto"/>
+				<!-- Progress -->
+				<RowDefinition Height="*"/>
+				<!-- Log -->
+			</Grid.RowDefinitions>
+
+			<!-- Accent line -->
+			<Rectangle Grid.Row="0" Fill="{StaticResource TopAccentLine}"/>
+
+			<!-- Header -->
+			<Border Grid.Row="1"
+                    Background="{StaticResource CardBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="0,0,0,1"
+                    Padding="20,0">
+				<Grid>
+					<TextBlock Text="Selecciona un perfil para comenzar la optimizacion"
+                               FontFamily="Consolas"
+                               FontSize="12"
+                               Foreground="{StaticResource TextMutedBrush}"
+                               VerticalAlignment="Center"/>
+
+					<!-- Estado online -->
+					<StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+						<Ellipse x:Name="StatusDot"
+                                 Width="7" Height="7"
+                                 Fill="{StaticResource NeonBlueBrush}"
+                                 Margin="0,0,6,0"/>
+						<TextBlock x:Name="ProgressText"
+                                   Text="0%"
+                                   FontFamily="Consolas"
+                                   FontSize="11"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource NeonBlueBrush}"
+                                   VerticalAlignment="Center"/>
+					</StackPanel>
+				</Grid>
+			</Border>
+
+			<!-- Progress bar -->
+			<Border Grid.Row="2"
+                    Padding="20,14"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="0,0,0,1">
+				<StackPanel>
+					<ProgressBar x:Name="ProfileProgress"
+                                 Style="{StaticResource NeonProgressBar}"
+                                 Minimum="0"
+                                 Maximum="100"
+                                 Value="0"
+                                 Visibility="Visible"/>
+				</StackPanel>
+			</Border>
+
+			<!-- Info text (oculto por defecto, igual que antes) -->
+			<TextBlock x:Name="InfoText"
+                       Grid.Row="3"
+                       Text=""
+                       FontFamily="Consolas"
+                       FontSize="11"
+                       Foreground="{StaticResource NeonBlueBrush}"
+                       Margin="20,8"
+                       Visibility="Collapsed"
+                       TextWrapping="Wrap"/>
+
+			<!-- LOG -->
+			<Border Grid.Row="4"
+                    Margin="20,8,20,20"
+                    Style="{StaticResource GamerCard}"
+                    Padding="0">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="32"/>
+						<!-- Label del log -->
+						<RowDefinition Height="*"/>
+						<!-- Log content -->
+					</Grid.RowDefinitions>
+
+					<!-- Header del log -->
+					<Border Grid.Row="0"
+                            Background="{StaticResource SurfaceBrush}"
+                            CornerRadius="4,4,0,0"
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="0,0,0,1"
+                            Padding="12,0">
+						<TextBlock Text="// OUTPUT LOG"
+                                   FontFamily="Consolas"
+                                   FontSize="9"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}"
+                                   
+                                   VerticalAlignment="Center"/>
+					</Border>
+
+					<!-- ListBox log -->
+					<ListBox x:Name="LogBox"
+                             Grid.Row="1"
+                             Style="{StaticResource LogListBox}"
+                             BorderThickness="0"
+                             Background="#070B0F"
+                             Visibility="Visible"/>
+				</Grid>
+			</Border>
+
+		</Grid>
+
+	</Grid>
+</Controls:MetroWindow>

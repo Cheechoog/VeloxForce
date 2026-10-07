@@ -1,0 +1,32 @@
+<UserControl x:Class="FortniteBoost.Pages.BackupsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,20">
+
+            <TextBlock Text="Backups de Fortnite" Style="{StaticResource NeonTitle}"
+                       FontSize="20" Margin="0,0,0,4"/>
+            <TextBlock Text="Guarda y restaura tu GameUserSettings.ini cuando quieras."
+                       Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="13"
+                       Margin="0,0,0,18"/>
+
+            <Grid Margin="0,0,0,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="10"/><ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="CREAR BACKUP" Style="{StaticResource PrimaryButton}"
+                        HorizontalAlignment="Stretch" Click="CreateBackup_Click"/>
+                <Button Grid.Column="2" Content="RESTAURAR BACKUP" Style="{StaticResource OutlineButton}"
+                        HorizontalAlignment="Stretch" Click="RestoreBackup_Click"/>
+            </Grid>
+
+            <TextBlock Text="// REGISTRO" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                       Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,8"/>
+            <Border Style="{StaticResource GamerCard}">
+                <ListBox x:Name="BackupLog" Style="{StaticResource LogListBox}" Height="260"
+                         Background="Transparent" BorderThickness="0"/>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

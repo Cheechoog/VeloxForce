@@ -1,0 +1,57 @@
+<Controls:MetroWindow x:Class="FortniteBoost.ExecutionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    Title="Optimizando"
+    Width="560" Height="560"
+    WindowStartupLocation="CenterOwner"
+    ResizeMode="NoResize"
+    ShowCloseButton="False"
+    GlowBrush="{StaticResource NeonBlueBrush}"
+    BorderThickness="1">
+
+    <Border Background="{StaticResource DarkBackgroundBrush}" Padding="28,24">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Encabezado -->
+            <StackPanel Grid.Row="0">
+                <TextBlock x:Name="TitleText" Text="Aplicando perfil"
+                           Style="{StaticResource NeonTitle}" FontSize="19"/>
+                <TextBlock x:Name="SubtitleText" Text="Esto puede tardar un par de minutos. No cierres la ventana."
+                           Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                           Margin="0,4,0,0" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <!-- Progreso -->
+            <Grid Grid.Row="1" Margin="0,18,0,14">
+                <ProgressBar x:Name="Progress" Style="{StaticResource NeonProgressBar}" Height="10"
+                             Minimum="0" Maximum="100"/>
+                <TextBlock x:Name="PercentText" Text="0%" FontFamily="Consolas" FontSize="11" FontWeight="Bold"
+                           Foreground="{StaticResource TextPrimaryBrush}"
+                           HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,18"/>
+            </Grid>
+
+            <!-- Lista de pasos -->
+            <Border Grid.Row="2" Style="{StaticResource GamerCard}" Padding="4">
+                <ScrollViewer x:Name="StepScroll" VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="StepList" Margin="12,8"/>
+                </ScrollViewer>
+            </Border>
+
+            <!-- Pie -->
+            <Grid Grid.Row="3" Margin="0,16,0,0">
+                <TextBlock x:Name="DoneSummary" Text="" FontFamily="Consolas" FontSize="11"
+                           Foreground="{StaticResource NeonGreenBrush}" VerticalAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Button x:Name="CloseButton" Content="CERRAR" Style="{StaticResource PrimaryButton}"
+                        HorizontalAlignment="Right" IsEnabled="False" Click="Close_Click"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Controls:MetroWindow>

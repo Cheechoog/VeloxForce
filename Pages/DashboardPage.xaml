@@ -1,0 +1,112 @@
+<UserControl x:Class="FortniteBoost.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,20">
+
+            <!-- Bienvenida -->
+            <Border Style="{StaticResource GamerCardAccent}" Margin="0,0,0,16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Bienvenido a VeloxForge" Style="{StaticResource NeonTitle}"
+                                   FontSize="20" Margin="0,0,0,6"/>
+                        <TextBlock Text="Optimiza tu PC para Fortnite: perfiles, backups y monitoreo en tiempo real."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI"
+                                   FontSize="13" TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <Button Grid.Column="1" Content="VER PERFILES" Style="{StaticResource PrimaryButton}"
+                            VerticalAlignment="Center" Margin="16,0,0,0" Click="GoPerfiles_Click"/>
+                </Grid>
+            </Border>
+
+            <!-- Metricas en vivo -->
+            <TextBlock Text="// RENDIMIENTO EN VIVO" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                       Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,10"/>
+            <Grid Margin="0,0,0,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- CPU -->
+                <Border Grid.Column="0" Style="{StaticResource GamerCard}">
+                    <StackPanel>
+                        <TextBlock Text="CPU" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="CpuPercent" Text="--" FontFamily="Consolas" FontSize="26"
+                                   FontWeight="Bold" Foreground="{StaticResource NeonBlueBrush}"/>
+                        <ProgressBar x:Name="CpuBar" Style="{StaticResource NeonProgressBar}" Height="6"
+                                     Minimum="0" Maximum="100" Margin="0,8,0,8"/>
+                        <TextBlock x:Name="CpuName" Text="Detectando..." FontFamily="Consolas" FontSize="10"
+                                   Foreground="{StaticResource TextMutedBrush}" TextTrimming="CharacterEllipsis"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- RAM -->
+                <Border Grid.Column="2" Style="{StaticResource GamerCard}">
+                    <StackPanel>
+                        <TextBlock Text="RAM" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="RamPercent" Text="--" FontFamily="Consolas" FontSize="26"
+                                   FontWeight="Bold" Foreground="{StaticResource NeonGreenBrush}"/>
+                        <ProgressBar x:Name="RamBar" Style="{StaticResource NeonProgressBar}" Height="6"
+                                     Minimum="0" Maximum="100" Margin="0,8,0,8"/>
+                        <TextBlock x:Name="RamTotal" Text="Detectando..." FontFamily="Consolas" FontSize="10"
+                                   Foreground="{StaticResource TextMutedBrush}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- GPU -->
+                <Border Grid.Column="4" Style="{StaticResource GamerCard}">
+                    <StackPanel>
+                        <TextBlock Text="GPU" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="GpuPercent" Text="--" FontFamily="Consolas" FontSize="26"
+                                   FontWeight="Bold" Foreground="{StaticResource NeonPurpleBrush}"/>
+                        <ProgressBar x:Name="GpuBar" Style="{StaticResource NeonProgressBar}" Height="6"
+                                     Minimum="0" Maximum="100" Margin="0,8,0,8"/>
+                        <TextBlock x:Name="GpuName" Text="Detectando..." FontFamily="Consolas" FontSize="10"
+                                   Foreground="{StaticResource TextMutedBrush}" TextTrimming="CharacterEllipsis"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Accesos rapidos -->
+            <TextBlock Text="// ACCESOS RAPIDOS" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                       Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,10"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="8"/><ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Style="{StaticResource GamerCard}">
+                    <StackPanel>
+                        <TextBlock Text="PERFIL COMPETITIVO" FontFamily="Consolas" FontSize="11" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonBlueBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="Maxima optimizacion para torneos y ranked."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Margin="0,0,0,12"/>
+                        <Button Content="IR" Style="{StaticResource OutlineButton}"
+                                HorizontalAlignment="Left" Click="GoPerfiles_Click"/>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="2" Style="{StaticResource GamerCard}">
+                    <StackPanel>
+                        <TextBlock Text="PERFIL STREAMING" FontFamily="Consolas" FontSize="11" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonGreenBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="Balance entre calidad y FPS estables para transmitir."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Margin="0,0,0,12"/>
+                        <Button Content="IR" Style="{StaticResource OutlineButton}"
+                                HorizontalAlignment="Left" Click="GoPerfiles_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

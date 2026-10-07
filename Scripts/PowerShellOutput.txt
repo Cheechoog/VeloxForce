@@ -1,0 +1,66 @@
+﻿=== STDOUT ===
+
+
+=== STDERR ===
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 6 Car�cter: 37
++     [string]$HAGS           = "yes",ss
++                                     ~
+Falta una expresi�n despu�s de ','.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 6 Car�cter: 36
++     [string]$HAGS           = "yes",ss
++                                    ~
+Falta el par�ntesis de cierre ')' en la lista de par�metros de la funci�n.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 21 Car�cter: 1
++ )
++ ~
+Token ')' inesperado en la expresi�n o la instrucci�n.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 7 Car�cter: 31
++     [string]$RAM            = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 8 Car�cter: 31
++     [string]$Visuals        = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 9 Car�cter: 31
++     [string]$CoreParking    = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 10 Car�cter: 31
++     [string]$Network        = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 11 Car�cter: 31
++     [string]$GameDVR        = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 12 Car�cter: 31
++     [string]$Wallpaper      = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+En C:\Users\nelso\OneDrive\Documentos\APPS\Optimizacion 
+Juegos\FortniteBoost\FortniteBoost\FortniteBoost\Scripts\OptimizeCompetitive.ps1: 13 Car�cter: 31
++     [string]$Notifications  = "yes",
++                               ~~~~~
+La expresi�n de asignaci�n no es v�lida. La entrada de un operador de asignaci�n debe ser un objeto que pueda aceptar 
+asignaciones, como una variable o una propiedad.
+No se notificaron todos los errores de an�lisis. Corrija los errores notificados e int�ntelo de nuevo.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterToken
+ 
+

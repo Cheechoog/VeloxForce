@@ -1,0 +1,9 @@
+﻿bin/
+obj/
+Output/
+.vs/
+*.user
+# Seguridad: nunca subir llaves ni generador de licencias
+*.key
+VeloxKeys/
+VeloxKeygen/

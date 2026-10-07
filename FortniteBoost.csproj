@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FortniteBoost.App</StartupObject>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <AssemblyName>VeloxForce</AssemblyName>
+    <AssemblyTitle>Velox Force</AssemblyTitle>
+    <Product>Velox Force</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\OptimizeCompetitive.ps1" />
+    <None Remove="Scripts\OptimizeCPU.ps1" />
+    <None Remove="Scripts\RestoreDefault.ps1" />
+    <None Remove="Scripts\TestProgress.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\OptimizeCompetitive.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OptimizeCPU.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OptimizeStreaming.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\RestoreDefault.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OptimizeGeneral.ps1">
+       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\TestProgress.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\logo_x.png" />
+    <Resource Include="Assets\logo_full.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="System.Management" Version="10.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+<Controls:MetroWindow x:Class="FortniteBoost.ConfigWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="Configuración"
+                      Height="400" Width="600"
+                      WindowStartupLocation="CenterScreen"
+                      GlowBrush="{DynamicResource AccentColorBrush}">
+
+	<Grid Background="{StaticResource DarkBackgroundBrush}">
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+			<TextBlock Text="⚙ Configuración General"
+                       Foreground="{StaticResource NeonBlueBrush}"
+                       FontSize="20"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+			<!-- Idioma -->
+			<StackPanel Orientation="Horizontal" Margin="0,10">
+				<TextBlock Text="🌐 Idioma:" Foreground="{StaticResource NeonBlueBrush}" Width="120"/>
+				<ComboBox x:Name="LanguageCombo" Width="200" SelectedIndex="0">
+					<ComboBoxItem Content="Español"/>
+					<ComboBoxItem Content="English"/>
+				</ComboBox>
+			</StackPanel>
+
+			<!-- Tema -->
+			<StackPanel Orientation="Horizontal" Margin="0,10">
+				<TextBlock Text="🎨 Tema:" Foreground="{StaticResource NeonBlueBrush}" Width="120"/>
+				<ComboBox x:Name="ThemeCombo" Width="200" SelectedIndex="0">
+					<ComboBoxItem Content="Oscuro"/>
+					<ComboBoxItem Content="Claro"/>
+				</ComboBox>
+			</StackPanel>
+
+			<!-- Licencia -->
+			<StackPanel Orientation="Horizontal" Margin="0,10">
+				<TextBlock Text="🔑 Licencia:" Foreground="{StaticResource NeonBlueBrush}" Width="120"/>
+				<TextBox x:Name="LicenseBox" Width="200"
+                         Controls:TextBoxHelper.Watermark="Ingrese su clave..."/>
+			</StackPanel>
+
+			<!-- Botón Guardar -->
+			<Button Content="💾 Guardar Configuración"
+                    Click="SaveConfig_Click"
+                    Style="{StaticResource GamerButton}"
+                    Margin="0,20,0,0"/>
+		</StackPanel>
+	</Grid>
+</Controls:MetroWindow>
+
+

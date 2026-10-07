@@ -1,0 +1,18 @@
+﻿<Application x:Class="FortniteBoost.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- SIN StartupUri: ahora App.xaml.cs decide si abre la licencia o el MainWindow -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro base -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+
+                <!-- Tus temas gamer -->
+                <ResourceDictionary Source="pack://application:,,,/VeloxForce;component/Themes/NeonTheme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/VeloxForce;component/Themes/GamerTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

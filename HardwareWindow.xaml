@@ -1,0 +1,36 @@
+<Controls:MetroWindow x:Class="FortniteBoost.HardwareWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="Hardware del Equipo"
+                      Height="400" Width="600"
+                      WindowStartupLocation="CenterScreen"
+                      GlowBrush="{DynamicResource AccentColorBrush}">
+
+	<Grid Background="{StaticResource DarkBackgroundBrush}">
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+			<TextBlock Text="🖥 Hardware Detectado"
+                       Foreground="{StaticResource NeonBlueBrush}"
+                       FontSize="20"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+			<TextBlock x:Name="CpuText"
+                       Foreground="{StaticResource NeonGreenBrush}"
+                       FontSize="16" Margin="0,10"/>
+			<TextBlock x:Name="GpuText"
+                       Foreground="{StaticResource NeonGreenBrush}"
+                       FontSize="16" Margin="0,10"/>
+			<TextBlock x:Name="RamText"
+                       Foreground="{StaticResource NeonGreenBrush}"
+                       FontSize="16" Margin="0,10"/>
+
+			<Button Content="🔄 Actualizar"
+                    Click="RefreshHardware_Click"
+                    Style="{StaticResource GamerButton}"
+                    Margin="0,20,0,0"/>
+		</StackPanel>
+	</Grid>
+</Controls:MetroWindow>
+

@@ -1,0 +1,111 @@
+<UserControl x:Class="FortniteBoost.Pages.PerfilesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,20">
+
+            <TextBlock Text="Perfiles de optimizacion" Style="{StaticResource NeonTitle}"
+                       FontSize="20" Margin="0,0,0,4"/>
+            <TextBlock Text="Elige un perfil. Cada uno aplica un conjunto de ajustes distinto."
+                       Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="13"
+                       Margin="0,0,0,18"/>
+
+            <WrapPanel>
+
+                <!-- COMPETITIVO -->
+                <Border Style="{StaticResource GamerCard}" Width="250" Margin="0,0,12,12" VerticalAlignment="Top">
+                    <StackPanel>
+                        <Border Height="96" CornerRadius="8" Margin="0,0,0,12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#00334D" Offset="0"/>
+                                    <GradientStop Color="#00C8E0" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="&#9876;" FontSize="42" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Foreground="#070B0F"/>
+                        </Border>
+                        <TextBlock Text="COMPETITIVO" FontFamily="Consolas" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonBlueBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="Maximo FPS para ranked y torneos. Todo en bajo, sistema al 100% para el juego."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Height="66" Margin="0,0,0,10"/>
+                        <Button Content="EJECUTAR" Style="{StaticResource PrimaryButton}"
+                                HorizontalAlignment="Stretch" Click="Competitivo_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- STREAMING -->
+                <Border Style="{StaticResource GamerCard}" Width="250" Margin="0,0,12,12" VerticalAlignment="Top">
+                    <StackPanel>
+                        <Border Height="96" CornerRadius="8" Margin="0,0,0,12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#00402A" Offset="0"/>
+                                    <GradientStop Color="#00FF88" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="&#127909;" FontSize="42" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Foreground="#070B0F"/>
+                        </Border>
+                        <TextBlock Text="STREAMING" FontFamily="Consolas" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonGreenBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="FPS estables con buena imagen para transmitir sin tirones en vivo."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Height="66" Margin="0,0,0,10"/>
+                        <Button Content="EJECUTAR" Style="{StaticResource PrimaryButton}"
+                                HorizontalAlignment="Stretch" Click="Streaming_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- PC / GENERAL -->
+                <Border Style="{StaticResource GamerCard}" Width="250" Margin="0,0,12,12" VerticalAlignment="Top">
+                    <StackPanel>
+                        <Border Height="96" CornerRadius="8" Margin="0,0,0,12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#2A2A3D" Offset="0"/>
+                                    <GradientStop Color="#BF5FFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="&#128421;" FontSize="42" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Foreground="#070B0F"/>
+                        </Border>
+                        <TextBlock Text="OPTIMIZAR EQUIPO" FontFamily="Consolas" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonPurpleBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="Para cualquier PC, sin juegos. Acelera Windows en equipos lentos. Ideal para mantenimiento."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Height="66" Margin="0,0,0,10"/>
+                        <Button Content="EJECUTAR" Style="{StaticResource PrimaryButton}"
+                                HorizontalAlignment="Stretch" Click="General_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- RESTAURAR -->
+                <Border Style="{StaticResource GamerCard}" Width="250" Margin="0,0,12,12" VerticalAlignment="Top">
+                    <StackPanel>
+                        <Border Height="96" CornerRadius="8" Margin="0,0,0,12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#3D1020" Offset="0"/>
+                                    <GradientStop Color="#FF2D55" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="&#8635;" FontSize="42" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Foreground="#070B0F"/>
+                        </Border>
+                        <TextBlock Text="RESTAURAR" FontFamily="Consolas" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource NeonRedBrush}" Margin="0,0,0,6"/>
+                        <TextBlock Text="Devuelve Windows y Fortnite a como estaban antes de optimizar."
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="12"
+                                   TextWrapping="Wrap" Height="66" Margin="0,0,0,10"/>
+                        <Button Content="RESTAURAR" Style="{StaticResource OutlineButton}"
+                                HorizontalAlignment="Stretch" Click="Restaurar_Click"/>
+                    </StackPanel>
+                </Border>
+
+            </WrapPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

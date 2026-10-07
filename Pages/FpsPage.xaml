@@ -1,0 +1,50 @@
+<UserControl x:Class="FortniteBoost.Pages.FpsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,20">
+
+            <TextBlock Text="Mostrar FPS en pantalla" Style="{StaticResource NeonTitle}"
+                       FontSize="20" Margin="0,0,0,4"/>
+            <TextBlock Text="Activa el contador que ya trae tu PC para ver los FPS mientras juegas y comprobar la mejora."
+                       Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" FontSize="13"
+                       TextWrapping="Wrap" Margin="0,0,0,18"/>
+
+            <!-- Hardware detectado -->
+            <Border Style="{StaticResource GamerCard}" Margin="0,0,0,14">
+                <StackPanel>
+                    <TextBlock Text="TU TARJETA GRAFICA" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                               Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,6"/>
+                    <TextBlock x:Name="GpuText" Text="Detectando..." FontFamily="Segoe UI" FontSize="15"
+                               Foreground="{StaticResource NeonPurpleBrush}" TextWrapping="Wrap"/>
+                    <TextBlock x:Name="MonitorText" Text="" FontFamily="Segoe UI" FontSize="12"
+                               Foreground="{StaticResource TextMutedBrush}" Margin="0,6,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Opcion recomendada -->
+            <Border Style="{StaticResource GamerCard}" Margin="0,0,0,14">
+                <StackPanel>
+                    <TextBlock x:Name="RecoTitle" Text="OPCION RECOMENDADA PARA TU PC" FontFamily="Consolas" FontSize="9"
+                               FontWeight="Bold" Foreground="{StaticResource NeonGreenBrush}" Margin="0,0,0,6"/>
+                    <TextBlock x:Name="RecoDesc"
+                               Text="Contador de FPS de Windows (Xbox Game Bar). No requiere instalar nada."
+                               Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" FontSize="13"
+                               TextWrapping="Wrap" Margin="0,0,0,12"/>
+                    <Button x:Name="MainButton" Content="ACTIVAR CONTADOR DE FPS" Style="{StaticResource PrimaryButton}"
+                            HorizontalAlignment="Left" Click="Activate_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Pasos -->
+            <Border Style="{StaticResource GamerCard}">
+                <StackPanel>
+                    <TextBlock Text="COMO VERLO EN EL JUEGO" FontFamily="Consolas" FontSize="9" FontWeight="Bold"
+                               Foreground="{StaticResource TextMutedBrush}" Margin="0,0,0,10"/>
+                    <StackPanel x:Name="StepsPanel"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
