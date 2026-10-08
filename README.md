@@ -43,9 +43,9 @@ cambios** con un clic.
 |:---:|:---:|
 | <img src="docs/screenshot-dashboard.png" width="400"/> | <img src="docs/screenshot-perfiles.png" width="400"/> |
 
-| Ejecución con progreso | Activación por licencia |
+| Ejecución con progreso | Mostrar FPS en pantalla |
 |:---:|:---:|
-| <img src="docs/screenshot-ejecucion.png" width="400"/> | <img src="docs/screenshot-licencia.png" width="400"/> |
+| <img src="docs/screenshot-ejecucion.png" width="400"/> | <img src="docs/screenshot-fps.png" width="400"/> |
 
 </div>
 
